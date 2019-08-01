@@ -43,7 +43,7 @@ namespace QuantumEncrpytion {
                 ResetQubit(qubits_B[i]);
             }
 
-            //Bob decrypts the message with the measurements of his Qubits
+            //Returning Alice's encryted message and Bob's measurements
             return (encryptedMessage, measurements_B);  
         }
     }
