@@ -12,12 +12,12 @@
 This is a simulation of quantum encrypted communication with Q# using one-time pad encryption. Alice takes a message and breaks it into characters, for each character it is turned into an 8-bit binary form using ascii encoding. Then we entangle 8 pairs of Qubits in bell states and distribute each of the entagled Qubits to Alice And Bob. When Alice measures all 8 of her Qubits, she collapses them into |0> or |1>, because her Qubits are entangled with Bob's Qubits, Bob's Qubits will collapse into the same states. Then Alice uses the collapsed states as the encryption key. She takes the 8-bit binary form of the character and perform XOR operation with the 8-bit collapsed Qubits. Then she sends the encrypted binary to Bob, Bob will in turn use his measurements of his Qubits, which should be identical to Alice's measurements, to perfrom XOR with the encrypted binary he received, the result should be the unencrypted 8-bit binary of the character.
 
 ### Qubits Entanglement
-We want to entangle two Qubits in bell state, which has 50% chance of collapsing into |00> and 50% chance into |11> upon measurement. So that when we measure Alice's Qubit and find it in |0>, we know that Bob's qubit is also in |0>. And when we find Alice's Qubit in |1>, we know that Bob's qubit is in |1>.
+We want to entangle two Qubits in bell state, which has 50% chance of collapsing into |00> and 50% chance into |11> upon measurement. So that when we measure Alice's Qubit and find it in |0>, we know that Bob's qubit is also in |0>. And when we find Alice's Qubit in |1>, we know that Bob's qubit is also in |1>.
 <br/> 
 <br/> 
 <img src="./img/bell_state.png"  width="37%">
 <br/> 
-To do so we first two Qubits in |0>, then we apply Hadamard Gate to the first Qubit to turn into a superposition.
+To do so we first prepare two Qubits in |0>, then we apply Hadamard Gate to the first Qubit to turn it into a superposition.
 <br/>
 <img src="./img/superposition.png"  width="40%">
 <br/> 
