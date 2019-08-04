@@ -13,16 +13,16 @@ This is a simulation of quantum encrypted communication with Q# using one-time p
 
 ### Qubits Entanglement
 We want to entangle two Qubits in bell state, which has 50% chance of collapsing into |00> and 50% chance into |11> upon measurement. So that when we measure Alice's Qubit and find it in |0>, we know that Bob's qubit is also in |0>. And when we find Alice's Qubit in |1>, we know that Bob's qubit is in |1>.
- <br /> 
-![](./img/bell_state.png | width=200)
- <br /> 
+<br/> 
+<img src="./img/bell_state.png"  width="40%" align="middle">
+<br/> 
 To do so we first two Qubits in |0>, then we apply Hadamard Gate to the first Qubit to turn into a superposition.
- <br /> 
-![](./img/superposition.png | width=200)
- <br /> 
+<br/>
+<img src="./img/superposition.png"  width="40%" align="middle">
+<br/> 
 Then we apply CNOT Gate where the first Qubit is control and the second Qubit is target, so that when the first Qubit is in state |1>, the NOT Gate is applied to the second Qubit. Applying this to the superposition above we get the bell state.
- <br /> 
-![](./img/cnot.png | width=200)
+<br/>
+<img src="./img/cnot.png"  width="40%" align="middle">
 
 ### One-Time Pad
 The one-time pad encryption method simply takes a plain text message and perform XOR (exclusive OR) with an encryption key. The encrypted message could simply be deciphered by performing XOR with the same encryption key. One-Time Pad is proven to be unbreakable if:
